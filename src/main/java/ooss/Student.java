@@ -1,10 +1,12 @@
 package ooss;
 
 public class Student extends Person {
+    private String name;
     private int klass;
     private boolean isLeader= false;
     public Student(int id, String name, int age) {
         super(id,name,age);
+        this.name = name;
     }
     public String introduce(){
         String msg = "My name is "+super.name+". I am "+super.age+" years old. "
@@ -30,6 +32,11 @@ public class Student extends Person {
     public int getKlass() {
         return klass;
     }
+
+    public String getName() {
+        return name;
+    }
+
     public boolean isLeader() {
         return isLeader;
     }
