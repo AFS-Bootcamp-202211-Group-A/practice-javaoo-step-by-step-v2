@@ -23,4 +23,17 @@ public class Klass {
     public int hashCode() {
         return number;
     }
+
+    public boolean isLeader(Student student) {
+        return student.isLeader();
+    }
+
+    public void assignLeader(Student student) {
+        if(student.getKlass() == this.number){
+            student.setLeader(true);
+        }
+        else {
+            System.out.println("It is not one of us.");
+        }
+    }
 }

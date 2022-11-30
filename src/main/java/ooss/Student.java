@@ -2,6 +2,7 @@ package ooss;
 
 public class Student extends Person {
     private int klass;
+    private boolean isLeader= false;
     public Student(int id, String name, int age) {
         super(id,name,age);
     }
@@ -24,5 +25,11 @@ public class Student extends Person {
     public int getKlass() {
         return klass;
     }
+    public boolean isLeader() {
+        return isLeader;
+    }
 
+    public void setLeader(boolean leader) {
+        isLeader = leader;
+    }
 }
