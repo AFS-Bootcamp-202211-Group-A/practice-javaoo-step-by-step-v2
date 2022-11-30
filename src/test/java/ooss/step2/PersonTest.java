@@ -17,11 +17,11 @@ public class PersonTest {
         assertEquals("My name is Tom. I am 18 years old. I am a student.", introduce);
     }
 
-//    @Test
-//    public void should_return_message_with_name_and_age_when_introduce_given_teacher() {
-//        Person jerry = new Teacher(1, "Jerry", 21);
-//        String introduce = jerry.introduce();
-//
-//        assertEquals("My name is Jerry. I am 21 years old. I am a teacher.", introduce);
-//    }
+    @Test
+    public void should_return_message_with_name_and_age_when_introduce_given_teacher() {
+        Person jerry = new Teacher(1, "Jerry", 21);
+        String introduce = jerry.introduce();
+
+        assertEquals("My name is Jerry. I am 21 years old. I am a teacher.", introduce);
+    }
 }
