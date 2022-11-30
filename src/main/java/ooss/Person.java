@@ -1,9 +1,9 @@
 package ooss;
 
 public class Person {
-    private final String name;
-    private final int id;
-    private final int age;
+    protected final String name;
+    protected final int id;
+    protected final int age;
 
     public Person(int id, String name, int age){
         this.id = id;
