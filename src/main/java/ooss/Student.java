@@ -14,7 +14,13 @@ public class Student extends Person{
     public String introduce() {
         String introduction = MessageFormat.format("{0} I am a student.", super.introduce());
         if (klass != null) {
-            introduction = MessageFormat.format("{0} I am in class {1}.", introduction, klass.getNumber());
+            if(klass.isLeader(this)) {
+                introduction = MessageFormat.format(
+                        "{0} I am the leader of class {1}.", introduction, klass.getNumber()
+                );
+            } else {
+                introduction = MessageFormat.format("{0} I am in class {1}.", introduction, klass.getNumber());
+            }
         }
         return introduction;
     }
@@ -24,6 +30,7 @@ public class Student extends Person{
     }
 
     public boolean isIn(Klass klass){
+        if(klass == null) return false;
         return klass.equals(this.klass);
     }
 
