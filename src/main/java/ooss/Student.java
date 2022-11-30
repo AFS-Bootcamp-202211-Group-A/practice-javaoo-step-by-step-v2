@@ -10,7 +10,12 @@ public class Student extends Person {
         String msg = "My name is "+super.name+". I am "+super.age+" years old. "
                 + "I am a student.";
         if(klass != 0){
-            msg += " I am in class "+klass+".";
+            if(isLeader == true){
+                msg += " I am the leader of class "+klass+".";
+            }
+            else {
+                msg += " I am in class " + klass + ".";
+            }
         }
         return msg;
     }
