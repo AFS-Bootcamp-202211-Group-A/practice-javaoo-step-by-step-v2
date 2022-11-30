@@ -7,4 +7,8 @@ public class Student extends Person{
         super(id, name, age);
     }
 
+    @Override
+    public String introduce(){
+        return MessageFormat.format("My name is {0}. I am {1} years old. I am a student.", this.getName(), this.getAge());
+    }
 }
