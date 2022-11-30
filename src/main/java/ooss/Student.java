@@ -27,4 +27,8 @@ public class Student extends Person{
         if(this.klass == null) return false;
         return this.klass.equals(klass);
     }
+
+    public Klass getKlass() {
+        return klass;
+    }
 }
