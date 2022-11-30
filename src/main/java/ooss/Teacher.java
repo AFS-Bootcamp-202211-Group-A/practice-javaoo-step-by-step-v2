@@ -15,6 +15,9 @@ public class Teacher extends Person{
 
     @Override
     public String introduce(){
+        if (klasses.isEmpty()){
+            return MessageFormat.format("My name is {0}. I am {1} years old. I am a teacher.", this.getName(), this.getAge());
+        }
         return MessageFormat.format("My name is {0}. I am {1} years old. I am a teacher. I teach Class {2}.", this.getName(), this.getAge(), this.getKlasses());
     }
 
