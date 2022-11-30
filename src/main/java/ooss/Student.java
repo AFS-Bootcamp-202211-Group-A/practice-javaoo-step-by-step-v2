@@ -11,7 +11,11 @@ public class Student extends Person{
 
     @Override
     public String introduce(){
-        return MessageFormat.format("My name is {0}. I am {1} years old. I am a student. I am in class 1.", this.getName(), this.getAge(), this.klass.getNumber());
+        String leaderStr = this.klass.isLeader(this) ?
+                MessageFormat.format("I am the leader of class {0}.", this.klass.getNumber())
+                : MessageFormat.format("I am in class {0}.", this.klass.getNumber());
+
+        return MessageFormat.format("My name is {0}. I am {1} years old. I am a student. {2}", this.getName(), this.getAge(), leaderStr);
     }
 
     public boolean isIn(Klass klass){

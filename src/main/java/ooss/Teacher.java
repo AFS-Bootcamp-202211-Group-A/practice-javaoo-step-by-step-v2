@@ -36,7 +36,7 @@ public class Teacher extends Person{
         return false;
     }
 
-    private String getKlasses(){
+    public String getKlasses(){
         return this.klasses.stream().map(klass -> String.valueOf(klass.getNumber())).collect(Collectors.joining(", "));
     }
 }
