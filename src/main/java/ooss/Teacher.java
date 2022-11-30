@@ -28,6 +28,7 @@ public class Teacher extends Person{
 
     public void assignTo(Klass klass){
         klasses.add(klass);
+        klass.attach(this);
     }
 
     public boolean belongsTo(Klass klass){
@@ -36,5 +37,11 @@ public class Teacher extends Person{
 
     public boolean isTeaching(Student student) {
         return klasses.contains(student.getKlass());
+    }
+    public String sayKlassLeader(Klass klass){
+        return MessageFormat.format(
+                "I am {0}, teacher of Class {1}. I know {2} become Leader.",
+                getName(), klass.getNumber(), klass.getLeader().getName()
+        );
     }
 }

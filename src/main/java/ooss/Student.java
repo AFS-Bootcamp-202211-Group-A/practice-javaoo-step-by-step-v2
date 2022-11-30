@@ -27,6 +27,7 @@ public class Student extends Person{
 
     public void join(Klass klass){
         this.klass = klass;
+        klass.attach(this);
     }
 
     public boolean isIn(Klass klass){
@@ -37,4 +38,13 @@ public class Student extends Person{
     public Klass getKlass() {
         return klass;
     }
+
+    public String sayKlassLeader(Klass klass){
+        return MessageFormat.format("" +
+                        "I am {0}, student of Class {1}. I know {2} become Leader.",
+                getName(), klass.getNumber(), klass.getLeader().getName()
+        );
+    }
+
+
 }
