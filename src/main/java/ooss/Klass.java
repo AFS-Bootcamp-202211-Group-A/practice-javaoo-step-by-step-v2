@@ -73,10 +73,10 @@ public class Klass {
         return false;
     }
 
-//    public void attach(Person person){
-//        people.add(person);
-//
-//    }
+    public void attach(Person person){
+        people.add(person);
+
+    }
 
 
 
