@@ -1,5 +1,8 @@
 package ooss;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class Student extends Person{
 
     private Klass klass;
@@ -16,6 +19,10 @@ public class Student extends Person{
             output += " I am in class " + klass.getNumber()+ ".";
         }
         return output;
+    }
+
+    public String myNameAndClass(){
+        return "I am " + this.getName() + ", student of Class " + klass.getNumber() + ".";
     }
 
     public void join(Klass newKlass){

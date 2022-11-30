@@ -16,6 +16,10 @@ public class Person {
         this.age = age;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public boolean equals(Object obj)
     {

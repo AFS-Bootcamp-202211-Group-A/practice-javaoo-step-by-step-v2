@@ -24,6 +24,12 @@ public class Teacher extends Person{
         return responsibleClasses.stream().anyMatch(student::isIn);
     }
 
+    public String myNameAndClass(){
+        List<String> responsibleClassesString = responsibleClasses.stream().map(Klass::getNumber).map(Object::toString).collect(Collectors.toList());
+        String classes = String.join(", ", responsibleClassesString);
+        return "I am " + this.getName() + ", teacher of Class " + classes + ".";
+    }
+
 
     public String introduce() {
 
