@@ -9,7 +9,13 @@ public class Student extends Person{
     }
 
     public String introduce() {
-        return super.introduce() + " I am a student." + " I am in class " + klass.getNumber()+ ".";
+        String output = super.introduce() + " I am a student.";
+        if (klass.isLeader(this)){
+            output += " I am the leader of class " + klass.getNumber() + ".";
+        } else{
+            output += " I am in class " + klass.getNumber()+ ".";
+        }
+        return output;
     }
 
     public void join(Klass newKlass){
