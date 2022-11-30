@@ -13,6 +13,9 @@ public class Student extends Person{
 
     public String introduce() {
         String output = super.introduce() + " I am a student.";
+        if (klass==null){
+            return output;
+        }
         if (klass.isLeader(this)){
             output += " I am the leader of class " + klass.getNumber() + ".";
         } else{

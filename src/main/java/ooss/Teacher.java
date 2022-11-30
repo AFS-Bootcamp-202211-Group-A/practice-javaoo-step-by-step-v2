@@ -35,6 +35,13 @@ public class Teacher extends Person{
 
         List<String> responsibleClassesString = responsibleClasses.stream().map(Klass::getNumber).map(Object::toString).collect(Collectors.toList());
         String classes = String.join(", ", responsibleClassesString);
-        return super.introduce() + " I am a teacher." + " I teach Class " + classes + ".";
+
+        if (responsibleClasses.size() > 0){
+            return super.introduce() + " I am a teacher." + " I teach Class " + classes + ".";
+
+        } else{
+            return super.introduce() + " I am a teacher.";
+        }
+
     }
 }
