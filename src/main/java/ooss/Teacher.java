@@ -29,7 +29,7 @@ public class Teacher extends Person{
         this.klass.add(klass.getNumber());
     }
 
-    public boolean isTeaching(Student tom) {
-        return this.klass.contains(tom.getKlass());
+    public boolean isTeaching(Student student) {
+        return this.klass.contains(student.getKlass());
     }
 }
